@@ -5,11 +5,11 @@ services:
     image: louislam/uptime-kuma:1
     container_name: uptime-kuma
     volumes:
-      - ./uptime-data:/app/data
+      - uptime:/app/data
     ports:
       - 3001:3001  # <Host Port>:<Container Port>
     restart: always
     
 volumes:
-    uptime-data:
+    uptime:
         size: 4Gi
